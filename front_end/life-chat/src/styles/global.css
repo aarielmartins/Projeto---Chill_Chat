@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  body {
+    background-color: #111828;
+    color: #ffffff;
+  }
+
+  .app-layout {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 999px;
+}
+
+main:hover ::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-height: 800px) {
+  .aside-compact {
+    font-size: 0.85rem;
+  }
+
+  .aside-compact .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .aside-compact .icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .aside-compact .gap-y {
+    gap: 0.75rem;
+  }
+
+  .aside-compact .spacing {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .logo {
+    width: 240px;
+  }
+
+  .padding {
+    margin-bottom: 0;
+  }
+
+  .padding2 {
+    margin-top: 50px;
+  }
+
+  .layoutMain {
+    width: 650px;
+  }
+
+  .profile {
+    height: 250px;
+  }
+
+  .profileAvatar {
+    width: 160px;
+    height: 160px;
+    top: 192px;
+  }
+
+  .profileM {
+    margin: 0;
+  }
+
+  .configure {
+    margin-top: 2px;
+  }
+
+  .configure2 {
+    margin-bottom: 2px;
+  }
+}
