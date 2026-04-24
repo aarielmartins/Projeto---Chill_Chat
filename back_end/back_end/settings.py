@@ -24,17 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY", "chave-local-de-desenvolvimento")
+SECRET_KEY = '!7n$=n_sliv+4apo!o*%p1_gfvww^$^akr&4xm2qf79csub1wh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
 
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "aarielmartins.pythonanywhere.com",  # ← adicione seu usuário
-    "*"  # pode remover em produção real
-]
+ALLOWED_HOSTS = ["*"]
+
 
 # Application definition
 
@@ -89,7 +85,7 @@ WSGI_APPLICATION = 'back_end.wsgi.application'
 
 DATABASES = {
     "default": dj_database_url.config(
-        default=os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3"),
+        default=os.environ.get("DATABASE_URL"),
         conn_max_age=600,
         ssl_require=True,
     )
@@ -160,7 +156,6 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 CSRF_TRUSTED_ORIGINS = [
     "https://*.onrender.com",
     "https://*.vercel.app",
-    "https://aarielmartins.pythonanywhere.com",  # ← adicione
 ]
 
 CLOUDINARY_STORAGE = {
@@ -177,11 +172,3 @@ STORAGES = {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
 }
-
-ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
-    "SEU_USUARIO.pythonanywhere.com",  # ← adicione seu usuário
-    "*"  # pode remover em produção real
-]
-

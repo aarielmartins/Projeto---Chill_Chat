@@ -36,7 +36,7 @@ api.interceptors.response.use(
       }
 
       try {
-        const res = await axios.post(${process.env.REACT_APP_API_URL}token/refresh/, {
+        const res = await axios.post('http://127.0.0.1:8000/api/token/refresh/', {
           refresh
         })
 
@@ -52,7 +52,7 @@ api.interceptors.response.use(
     }
 
     return Promise.reject(error)
-  } 
+  }
 )
 
 export default api
