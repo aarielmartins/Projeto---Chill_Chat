@@ -21,7 +21,6 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate_email(self, value):
         validate_email(value)
-
         if User.objects.filter(email=value).exists():
             raise serializers.ValidationError("Este email já está em uso.")
         return value
@@ -43,16 +42,13 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         validated_data.pop('confirm_password')
-        user = User.objects.create(
+        user = User.objects.create_user(
             username=validated_data['username'],
             email=validated_data['email'],
+            password=validated_data['password'],
         )
-        user.set_password(validated_data['password'])
-        user.save()
-
         if not hasattr(user, 'profile'):
             UserProfile.objects.create(user=user)
-
         return user
 
 
@@ -85,9 +81,8 @@ class UserProfileSerializer(serializers.ModelSerializer):
             "followers_count",
             "following_count",
         ]
-
         read_only_fields = ["id", "username", "created_at"]
-    
+
     def get_followers_count(self, obj):
         return obj.user.followers.count()
 
@@ -117,15 +112,15 @@ class PostSerializer(serializers.ModelSerializer):
             "likes_count",
             "liked",
         ]
-        read_only_fields = ["id", "author_id", "username", "avatar", "created_at", "updated_at",]
-    
+        read_only_fields = ["id", "author_id", "username", "avatar", "created_at", "updated_at"]
+
     def get_likes_count(self, obj):
         return obj.likes.count()
 
     def get_liked(self, obj):
         user = self.context["request"].user
         return obj.likes.filter(user=user).exists()
-    
+
     def validate(self, data):
         content = data.get("content", "").strip()
         image = data.get("image")
@@ -135,8 +130,8 @@ class PostSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "Você precisa adicionar texto, imagem ou vídeo."
             )
-
         return data
+
 
 class SearchUserSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source="user.username")
@@ -146,11 +141,12 @@ class SearchUserSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "username",
-            "full_name"
+            "full_name",
             "profession",
             "bio",
-            "avatar"
+            "avatar",
         ]
+
 
 class SimpleUserSerializer(serializers.ModelSerializer):
     avatar = serializers.ImageField(source="profile.avatar", read_only=True)
@@ -158,6 +154,7 @@ class SimpleUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id", "username", "avatar"]
+
 
 class UserSearchSerializer(serializers.ModelSerializer):
     avatar = serializers.ImageField(source="profile.avatar", read_only=True)
@@ -167,6 +164,7 @@ class UserSearchSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ["id", "username", "avatar", "bio", "profession"]
+
 
 class CommentSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source="user.username", read_only=True)
