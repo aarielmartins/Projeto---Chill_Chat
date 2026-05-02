@@ -1,9 +1,19 @@
 # Chill Chat
 
-Projeto desenvolvido com:
+Rede social para compartilhamento de posts e interação entre usuários.
 
-Frontend: React + TypeScript
-Backend: Django + Django REST Framework
+# 🔗 Links
+
+- *Frontend (Vercel):* https://projeto-chill-chat.vercel.app
+- *Backend (PythonAnywhere):* https://aarielmartins.pythonanywhere.com
+
+# 🛠️ Tecnologias
+
+- *Back-end:* Python, Django REST Framework
+- *Banco de dados:* SQLite
+- *Front-end:* React (Create React App)
+- *Armazenamento de mídia:* Cloudinary
+- *Hospedagem:* PythonAnywhere (back) + Vercel (front)
 
 # Como rodar o projeto
 
