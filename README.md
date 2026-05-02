@@ -1,69 +1,9 @@
-# Life Chat
-
-Rede social estilo microblog full-stack onde usuários podem criar posts
-com texto, imagem ou vídeo, seguir pessoas, curtir, comentar e
-personalizar o perfil.
+# Chill Chat
 
 Projeto desenvolvido com:
 
 Frontend: React + TypeScript
 Backend: Django + Django REST Framework
-
-
-# Funcionalidades
-
-- Cadastro e login com autenticação JWT
-- Feed personalizado (posts de quem você segue)
-- Criar posts com texto, imagem ou vídeo
-- Curtir (like) posts
-- Comentar posts
-- Seguir / deixar de seguir usuários
-- Busca de usuários
-- Editar perfil (avatar, bio, username e senha)
-- Painel admin do Django
-
-
-# Tecnologias
-
-## Frontend
-
--   React
--   TypeScript
--   TailwindCSS
--   Axios
--   npm
-
-## Backend
-
--   Django
--   Django REST Framework
--   Simple JWT
--   SQLite
--   uv (gerenciador de dependências Python)
-
-
-# Estrutura do projeto
-
-LIFE CHAT/
-    
-    back_end/
-       back_end/
-        users/
-        media/
-        manage.py
-        pyproject.toml
-        uv.lock
-       db.sqlite3
-    
-    front_end/life-chat/
-        src/
-        public/
-        package.json
-        tailwind.config.mjs
-        tsconfig.json
-    
-    README.md
-
 
 # Como rodar o projeto
 
@@ -87,7 +27,16 @@ Instalar:
 # Rodando o Backend
 
 cd back_end
-uv sync
+
+configurar o env:
+    DATABASE_URL=URL DO BANCO DE DADOS
+    DEBUG=True
+    SECRET_KEY=SENHA
+
+    CLOUDINARY_CLOUD_NAME=NOME
+    CLOUDINARY_API_KEY=API KEY
+    CLOUDINARY_API_SECRET=API SECRET
+
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
@@ -103,14 +52,11 @@ cd front_end/life-chat
 npm install
 npm start
 
-Frontend: http://localhost:3000
-
-
 # Variáveis de ambiente (Projeto)
 
 Criar `.env`:
 
-    REACT_APP_API_URL=http://localhost:8000/api/
+    REACT_APP_API_URL=LINK DO BANCO DE DADOS
 
 
 # Principais Endpoints
@@ -141,8 +87,3 @@ POST /api/follow/:id/
 PATCH /api/profile/
 PATCH /api/profile/username/
 PATCH /api/profile/password/
-
-
-# Autor
-
-Samuel Sattiro
