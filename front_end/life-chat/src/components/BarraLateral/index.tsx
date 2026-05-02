@@ -54,52 +54,52 @@ const BarraLateral = ({ onAbrirConfig }: Props) => {
           src={profile?.avatar || perfil}
           alt="Perfil"
         />
-        <h3 className="mt-12 text-2xl text-blue-300">{`@${formatName(profile?.username || 'Usuário')}`}</h3>
+        <h3 className="mt-12 text-2xl text-[#ff8a3d]">{`@${formatName(profile?.username || 'Usuário')}`}</h3>
       </div>
       <div className="gap-y mt-10 flex flex-col gap-2">
         <NavLink
           to="/perfil/pagina-inicial"
           className={({ isActive }) =>
-            `flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-blue-300' : 'text-white [&:hover]:text-blue-300'}`
+            `flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-[#ff8a3d]' : 'text-white [&:hover]:text-[#ff8a3d]'}`
           }
         >
-          <House className="icon text-blue-300" />
+          <House className="icon text-[#ff8a3d]" />
           <span>Página Inicial</span>
         </NavLink>
         <NavLink
           to="/perfil/profile"
           className={({ isActive }) =>
-            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-blue-300' : 'text-white [&:hover]:text-blue-300'}`
+            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-[#ff8a3d]' : 'text-white [&:hover]:text-[#ff8a3d]'}`
           }
         >
-          <Account className="icon text-blue-300" />
+          <Account className="icon text-[#ff8a3d]" />
           <span>Perfil</span>
         </NavLink>
         <NavLink
           to="/perfil/search"
           className={({ isActive }) =>
-            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-blue-300' : 'text-white [&:hover]:text-blue-300'}`
+            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-[#ff8a3d]' : 'text-white [&:hover]:text-[#ff8a3d]'}`
           }
         >
-          <Reels className="icon text-blue-300" />
+          <Reels className="icon text-[#ff8a3d]" />
           <span>Pesquisar</span>
         </NavLink>
         <NavLink
           to="/perfil/reels"
           className={({ isActive }) =>
-            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-blue-300' : 'text-white [&:hover]:text-blue-300'}`
+            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-[#ff8a3d]' : 'text-white [&:hover]:text-[#ff8a3d]'}`
           }
         >
-          <Search className="icon text-blue-300" />
+          <Search className="icon text-[#ff8a3d]" />
           <span>Reels Global</span>
         </NavLink>
         <NavLink
           to="/perfil/messages"
           className={({ isActive }) =>
-            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-blue-300' : 'text-white [&:hover]:text-blue-300'}`
+            `mt-10 flex items-center justify-center gap-4 text-3xl transition ${isActive ? 'text-[#ff8a3d]' : 'text-white [&:hover]:text-[#ff8a3d]'}`
           }
         >
-          <Message className="icon text-blue-300" />
+          <Message className="icon text-[#ff8a3d]" />
           <span>Mensagens</span>
         </NavLink>
         <div className="padding2 group relative mt-32 flex items-center justify-center">
@@ -107,7 +107,7 @@ const BarraLateral = ({ onAbrirConfig }: Props) => {
             onClick={() => {
               onAbrirConfig()
             }}
-            className="text-md [&:hover]:text-blue-300"
+            className="text-md [&:hover]:text-[#ff8a3d]"
             aria-label="Configuração"
           >
             <More size={70} />

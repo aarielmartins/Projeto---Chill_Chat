@@ -95,7 +95,7 @@ const Search = () => {
   }
 
   return (
-    <Main className="flex w-full items-center justify-center bg-gray-900 text-white">
+    <Main className="flex w-full items-center justify-center bg-[#lelele] text-white">
       <div className="flex w-full max-w-3xl flex-col justify-center gap-4">
         <h2 className="mb-12 mt-20 text-center text-5xl">Pesquisar #</h2>
         <div className="mb-6 rounded-lg border border-yellow-300/40 bg-yellow-200/90 p-4 text-gray-900 shadow-lg">
@@ -104,7 +104,7 @@ const Search = () => {
           </p>
         </div>
 
-        <div className="flex h-16 w-full items-center rounded-md bg-white/5 px-4 outline outline-1 outline-white/10 focus-within:outline-indigo-500">
+        <div className="flex h-16 w-full items-center rounded-md bg-white/5 px-4 outline outline-1 outline-white/10 focus-within:outline-[#ffb36b]">
           <input
             type="text"
             placeholder="Pesquisar por Usuários"

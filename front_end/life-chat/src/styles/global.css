@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   }
 
   html,
@@ -20,8 +20,8 @@
   }
 
   body {
-    background-color: #111828;
-    color: #ffffff;
+    background-color: #1e1e1e; /* cinza escuro estilo Claude */
+    color: #e6e6e6;
   }
 
   .app-layout {
@@ -29,9 +29,69 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #1e1e1e;
+  }
+
+  /* Cards */
+  .card {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+  }
+
+  /* Links */
+  a {
+    color: #ff8a3d; /* laranja Claude */
+    text-decoration: none;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  /* Botões padrão */
+  button {
+    border-radius: 10px;
+    border: 1px solid #3a3a3a;
+    background-color: #2a2a2a;
+    color: #e6e6e6;
+    transition: all 0.2s ease;
+  }
+
+  button:hover {
+    background-color: #333333;
+  }
+
+  /* Botão destaque */
+  .btn-primary {
+    background-color: #ff8a3d;
+    color: #1e1e1e;
+    border: none;
+  }
+
+  .btn-primary:hover {
+    background-color: #e6762f;
+  }
+
+  /* Inputs */
+  input,
+  textarea {
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 10px;
+    padding: 8px 10px;
+    color: #e6e6e6;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #ff8a3d;
+    box-shadow: 0 0 0 2px rgba(255, 138, 61, 0.2);
   }
 }
 
+/* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -45,6 +105,7 @@ main:hover ::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Responsividade */
 @media (max-height: 800px) {
   .aside-compact {
     font-size: 0.85rem;
@@ -87,6 +148,9 @@ main:hover ::-webkit-scrollbar-thumb {
 
   .profile {
     height: 250px;
+    background-color: #2a2a2a;
+    border: 1px solid #3a3a3a;
+    border-radius: 16px;
   }
 
   .profileAvatar {
@@ -107,3 +171,23 @@ main:hover ::-webkit-scrollbar-thumb {
     margin-bottom: 2px;
   }
 }
+
+/* 
+background-main: #1e1e1e[]
+background-deep: #181818
+
+surface-primary: #2a2a2a
+surface-secondary: #242424
+
+border-default: #3a3a3a
+border-strong: #444444
+
+text-primary: #e6e6e6
+text-secondary: #b3b3b3
+text-disabled: #808080
+
+primary-orange: #ff8a3d
+primary-orange-hover: #e6762f
+primary-orange-light: #ffb36b
+
+hover-neutral: #333333 */

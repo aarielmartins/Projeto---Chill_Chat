@@ -50,12 +50,12 @@ const Messages = () => {
   if (!profile) return <p>Carregando perfil...</p>
 
   return (
-    <Main className="flex w-full items-center justify-center bg-gray-900 text-white">
+    <Main className="flex w-full items-center justify-center bg-[#lelele] text-white">
       <div>
         <h2 className="mb-12 mt-20 text-center text-5xl">Mensagens #</h2>
         {temMensagem ? (
           <div
-            className={`layoutMain flex w-[780px] flex-col rounded-md border border-white/10 bg-gray-900 p-8 text-white ${fechar ? 'hidden' : 'block'}`}
+            className={`layoutMain flex w-[780px] flex-col rounded-md border border-white/10 bg-[#lelele] p-8 text-white ${fechar ? 'hidden' : 'block'}`}
           >
             <div className="mb-6 flex items-center justify-between gap-4 border-b border-gray-300 pb-4">
               <div className="flex items-center justify-start gap-4">
@@ -81,7 +81,7 @@ const Messages = () => {
             <div className="flex items-center justify-end">
               <Botao
                 onClick={() => setVisivel(true)}
-                className="w-30 mt-6 flex h-8 items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-indigo-500"
+                className="w-30 mt-6 flex h-8 items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-[#ffb36b]"
               >
                 Responder
               </Botao>
@@ -89,7 +89,7 @@ const Messages = () => {
             <div className={visivel ? 'block' : 'hidden'}>
               <div>
                 <textarea
-                  className="mt-4 h-32 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+                  className="mt-4 h-32 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
                   placeholder="Escreva aqui."
                   onChange={(e) => setMensagem(e.target.value)}
                 ></textarea>
@@ -100,7 +100,7 @@ const Messages = () => {
                     setVisivel(false)
                     handleEnviar()
                   }}
-                  className="w-30 mt-2 flex h-8 items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-indigo-500"
+                  className="w-30 mt-2 flex h-8 items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-[#ffb36b]"
                 >
                   Enviar
                 </Botao>

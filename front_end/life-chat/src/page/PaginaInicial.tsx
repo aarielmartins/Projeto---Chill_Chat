@@ -30,7 +30,7 @@ const PaginaInicial = () => {
   if (loading) return <p>Carregando...</p>
 
   return (
-    <Main className="bg-gray-900 text-white">
+    <Main className="bg-[#lelele] text-white">
       <h2 className="mb-12 mt-20 text-center text-5xl">Pagina Inicial #</h2>
       <div className="mx-auto w-full px-4">
         {posts.length ? (

@@ -62,8 +62,8 @@ const Configure = ({ onClose }: Props) => {
   return (
     <div className="max-h-screen">
       <div className="flex items-center justify-between border-b border-gray-300 pb-6">
-        <h2 className="text-center text-4xl text-blue-300">Configurar Perfil</h2>
-        <Close onClick={onClose} className="cursor-pointer [&:hover]:text-blue-300" />
+        <h2 className="text-center text-4xl text-[#ff8a3d]">Configurar Perfil</h2>
+        <Close onClick={onClose} className="cursor-pointer [&:hover]:text-[#ff8a3d]" />
       </div>
       <div className="configure mx-auto mt-6 block max-w-[400px]">
         <label className="mb-4 block text-center" htmlFor="imagem-fundo-perfil">
@@ -77,11 +77,11 @@ const Configure = ({ onClose }: Props) => {
         />
         <label
           htmlFor="upload-fundo"
-          className="flex h-8 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-indigo-500"
+          className="flex h-8 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-[#ffb36b]"
         >
           Adicionar
         </label>
-        {imagemFundo && <p className="mt-2 text-center text-sm text-blue-300">{'"' + imagemFundo.name + '"'}</p>}
+        {imagemFundo && <p className="mt-2 text-center text-sm text-[#ff8a3d]">{'"' + imagemFundo.name + '"'}</p>}
       </div>
       <div className="configure mx-auto mt-6 block max-w-[400px] pb-10">
         <label className="mb-4 block text-center" htmlFor="imagem-perfil">
@@ -95,11 +95,11 @@ const Configure = ({ onClose }: Props) => {
         />
         <label
           htmlFor="upload-perfil"
-          className="flex h-8 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-indigo-500"
+          className="flex h-8 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-[#ffb36b]"
         >
           Adicionar
         </label>
-        {imagemPerfil && <p className="mt-2 text-center text-sm text-blue-300">{'"' + imagemPerfil.name + '"'}</p>}
+        {imagemPerfil && <p className="mt-2 text-center text-sm text-[#ff8a3d]">{'"' + imagemPerfil.name + '"'}</p>}
       </div>
       <div className="grid grid-cols-2 gap-6 border-t border-gray-300">
         <div>
@@ -110,7 +110,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="nome-completo"
             onChange={(e) => setNome(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -121,7 +121,7 @@ const Configure = ({ onClose }: Props) => {
             type="date"
             id="data-nascimento"
             onChange={(e) => setDataNascimento(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -132,7 +132,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="telefone"
             onChange={(e) => setTelefone(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -143,7 +143,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="profissao"
             onChange={(e) => setProfissao(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -154,7 +154,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="bio"
             onChange={(e) => setBio(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -165,7 +165,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="site"
             onChange={(e) => setUsername(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -176,7 +176,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="site"
             onChange={(e) => setPassword(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
         <div>
@@ -187,7 +187,7 @@ const Configure = ({ onClose }: Props) => {
             type="text"
             id="site"
             onChange={(e) => setConfirmPassword(e.target.value)}
-            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="flex h-6 w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
         </div>
       </div>

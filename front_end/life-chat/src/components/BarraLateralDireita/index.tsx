@@ -21,7 +21,7 @@ const BarraLateralDireita = ({ onAbrirPost }: Props) => {
       <div className="gap-y flex flex-col gap-6">
         <div className="mt-8 space-y-1 pl-6">
           <p>
-            <a className="text-blue-300 hover:underline" href="#">
+            <a className="text-[#ff8a3d] hover:underline" href="#">
               Amizade #
             </a>
           </p>
@@ -29,7 +29,7 @@ const BarraLateralDireita = ({ onAbrirPost }: Props) => {
         </div>
         <div className="mt-8 space-y-1 pl-6">
           <p>
-            <a className="text-blue-300 hover:underline" href="#">
+            <a className="text-[#ff8a3d] hover:underline" href="#">
               Viajando Sozinha #
             </a>
           </p>
@@ -37,7 +37,7 @@ const BarraLateralDireita = ({ onAbrirPost }: Props) => {
         </div>
         <div className="mt-8 space-y-1 pl-6">
           <p>
-            <a className="text-blue-300 hover:underline" href="#">
+            <a className="text-[#ff8a3d] hover:underline" href="#">
               IA para todos #
             </a>
           </p>
@@ -49,7 +49,7 @@ const BarraLateralDireita = ({ onAbrirPost }: Props) => {
           onClick={() => {
             onAbrirPost()
           }}
-          className="text-md [&:hover]:text-blue-300"
+          className="text-md [&:hover]:text-[#ff8a3d]"
           aria-label="Configuração"
         >
           <Plus size={70} />

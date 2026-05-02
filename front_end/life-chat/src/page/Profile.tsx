@@ -66,7 +66,7 @@ const Profile = () => {
   if (!profile) return <p>Carregando perfil...</p>
 
   return (
-    <Main className="relative block bg-gray-900 p-6 text-white">
+    <Main className="relative block bg-[#lelele] p-6 text-white">
       <div className="">
         <img
           className="profile h-[400px] w-full object-cover"

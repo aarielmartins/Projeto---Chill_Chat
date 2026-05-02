@@ -52,7 +52,7 @@ const Login = ({ onSwitch }: LoginProps) => {
   }
 
   return (
-    <div className="flex min-h-screen flex-col justify-center bg-gray-900 px-6 py-12 lg:px-8">
+    <div className="flex min-h-screen flex-col justify-center bg-[#181818] px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img src={Logo} alt="Your Company" className="mx-auto h-auto w-80" />
         <h2 className="mt-10 text-center text-2xl/9 tracking-tight text-white">Faça login na sua conta</h2>
@@ -73,7 +73,7 @@ const Login = ({ onSwitch }: LoginProps) => {
                 autoComplete="current-email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`block w-full rounded-md bg-white/5 px-3 py-1.5 ${error ? 'border border-red-500' : 'border border-gray-300'} text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6`}
+                className={`block w-full rounded-md bg-[#2a2a2a] px-3 py-1.5 ${error ? 'border border-red-500' : 'border border-gray-300'} text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ffb36b] sm:text-sm/6`}
               />
             </div>
           </div>
@@ -84,7 +84,7 @@ const Login = ({ onSwitch }: LoginProps) => {
                 Senha
               </label>
               <div className="text-sm">
-                <a href="#" className="font-semibold text-indigo-400 hover:text-indigo-300">
+                <a href="#" className="font-semibold text-[#ff8a3d] hover:text-[#ff8a3d]">
                   Esqueceu a senha?
                 </a>
               </div>
@@ -98,7 +98,7 @@ const Login = ({ onSwitch }: LoginProps) => {
                 autoComplete="current-password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`block w-full rounded-md bg-white/5 px-3 py-1.5 ${error ? 'border border-red-500' : 'border border-gray-300'} text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-500 sm:text-sm/6`}
+                className={`block w-full rounded-md bg-white/5 px-3 py-1.5 ${error ? 'border border-red-500' : 'border border-gray-300'} text-base text-white outline-1 -outline-offset-1 outline-white/10 placeholder:text-gray-500 focus:outline-2 focus:-outline-offset-2 focus:outline-[#ffb36b] sm:text-sm/6`}
               />
               <button
                 type="button"
@@ -114,16 +114,16 @@ const Login = ({ onSwitch }: LoginProps) => {
           <div>
             <button
               type="submit"
-              className="flex w-full cursor-pointer justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm/6 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 [&:hover]:bg-indigo-400"
+              className="flex w-full cursor-pointer justify-center rounded-md bg-[#ff8a3d] px-3 py-1.5 text-sm/6 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffb36b] [&:hover]:bg-indigo-400"
             >
               Entrar
             </button>
           </div>
         </form>
 
-        <p className="mt-10 text-center text-sm/6 text-gray-400">
+        <p className="mt-10 text-center text-sm/6 text-[#ff8a3d]">
           Não tem uma conta?{' '}
-          <a href="#" className="font-semibold text-indigo-400 hover:text-indigo-300" onClick={onSwitch}>
+          <a href="#" className="font-semibold text-[#ff8a3d] hover:text-[#ff8a3d]" onClick={onSwitch}>
             Increva-se
           </a>
         </p>

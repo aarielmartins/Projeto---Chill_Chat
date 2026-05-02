@@ -55,7 +55,7 @@ const Post = ({ onClose }: Props) => {
         <textarea
           value={conteudo}
           onChange={(e) => setConteudo(e.target.value)}
-          className="mt-4 h-32 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+          className="mt-4 h-32 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           placeholder="O que está acontecendo?"
         />
       </div>
@@ -73,7 +73,7 @@ const Post = ({ onClose }: Props) => {
         />
         <label
           htmlFor="upload"
-          className="flex w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-indigo-500"
+          className="flex w-full cursor-pointer resize-none items-center justify-center rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 hover:outline-[#ffb36b]"
         >
           Adicionar imagem ou vídeo
         </label>

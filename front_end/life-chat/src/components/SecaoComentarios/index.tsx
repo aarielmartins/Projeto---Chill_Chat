@@ -56,7 +56,7 @@ const SecaoComentarios = ({ postId }: Props) => {
           <textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="h-24 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-indigo-500"
+            className="h-24 w-full resize-none rounded-md bg-gray-800 bg-white/5 p-4 placeholder-gray-400 outline-1 outline-white/10 focus:outline-[#ffb36b]"
           />
 
           <Botao
