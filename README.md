@@ -2,12 +2,12 @@
 
 Rede social para compartilhamento de posts e interação entre usuários.
 
-# 🔗 Links
+# Links
 
 - *Frontend (Vercel):* https://projeto-chill-chat.vercel.app
 - *Backend (PythonAnywhere):* https://aarielmartins.pythonanywhere.com
 
-# 🛠️ Tecnologias
+# Tecnologias
 
 - *Back-end:* Python, Django REST Framework
 - *Banco de dados:* SQLite
