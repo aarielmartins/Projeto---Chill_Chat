@@ -29,6 +29,7 @@ Instalar:
 cd back_end
 
 configurar o env:
+
     DATABASE_URL=URL DO BANCO DE DADOS
     DEBUG=True
     SECRET_KEY=SENHA
