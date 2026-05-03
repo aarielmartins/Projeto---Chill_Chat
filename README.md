@@ -46,9 +46,9 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 
-Backend: http://localhost:8000
+Exemplo backend: http://localhost:8000
 
-Admin: http://localhost:8000/admin/
+Exemplo admin: http://localhost:8000/admin/
 
 
 # Rodando o Frontend
