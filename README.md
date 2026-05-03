@@ -22,11 +22,6 @@ Rede social para compartilhamento de posts e interação entre usuários.
 ### Backend
 
 -   Python 3.11+
--   uv instalado
-
-Instalar:
-
--   pip install uv
 
 ### Frontend
 
