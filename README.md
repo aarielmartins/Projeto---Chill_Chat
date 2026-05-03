@@ -60,7 +60,7 @@ Criar `.env`:
     REACT_APP_API_URL=LINK DO BANCO DE DADOS
 
 
-# Principais Endpoints
+# Endpoints
 
 ## Auth
 
